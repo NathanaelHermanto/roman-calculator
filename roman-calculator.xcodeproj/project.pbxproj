@@ -14,6 +14,9 @@
 		D8C417532773A47D0004509D /* roman_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C417522773A47D0004509D /* roman_calculatorTests.swift */; };
 		D8C4175D2773A47D0004509D /* roman_calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4175C2773A47D0004509D /* roman_calculatorUITests.swift */; };
 		D8C4175F2773A47D0004509D /* roman_calculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4175E2773A47D0004509D /* roman_calculatorUITestsLaunchTests.swift */; };
+		D8C417712773A5A30004509D /* RomanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C417702773A5A30004509D /* RomanView.swift */; };
+		D8C417732773A5B60004509D /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C417722773A5B60004509D /* NumberView.swift */; };
+		D8C417752773AF9F0004509D /* RomanTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C417742773AF9F0004509D /* RomanTranslator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		D8C417582773A47D0004509D /* roman-calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "roman-calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C4175C2773A47D0004509D /* roman_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roman_calculatorUITests.swift; sourceTree = "<group>"; };
 		D8C4175E2773A47D0004509D /* roman_calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roman_calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D8C417702773A5A30004509D /* RomanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanView.swift; sourceTree = "<group>"; };
+		D8C417722773A5B60004509D /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		D8C417742773AF9F0004509D /* RomanTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanTranslator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +100,12 @@
 		D8C417402773A47B0004509D /* roman-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				D8C4176B2773A5420004509D /* views */,
 				D8C417412773A47B0004509D /* roman_calculatorApp.swift */,
 				D8C417432773A47B0004509D /* ContentView.swift */,
 				D8C417452773A47D0004509D /* Assets.xcassets */,
 				D8C417472773A47D0004509D /* Preview Content */,
+				D8C417742773AF9F0004509D /* RomanTranslator.swift */,
 			);
 			path = "roman-calculator";
 			sourceTree = "<group>";
@@ -125,6 +133,15 @@
 				D8C4175E2773A47D0004509D /* roman_calculatorUITestsLaunchTests.swift */,
 			);
 			path = "roman-calculatorUITests";
+			sourceTree = "<group>";
+		};
+		D8C4176B2773A5420004509D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D8C417702773A5A30004509D /* RomanView.swift */,
+				D8C417722773A5B60004509D /* NumberView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C417752773AF9F0004509D /* RomanTranslator.swift in Sources */,
 				D8C417442773A47B0004509D /* ContentView.swift in Sources */,
 				D8C417422773A47B0004509D /* roman_calculatorApp.swift in Sources */,
+				D8C417712773A5A30004509D /* RomanView.swift in Sources */,
+				D8C417732773A5B60004509D /* NumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
