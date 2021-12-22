@@ -12,13 +12,41 @@ let primaryColor = Color.init(red: 0, green: 116/255, blue: 178/255, opacity: 1.
 
 struct ContentView: View {
     
-    @State var isRoman = false
+    @State var isRoman = true
     
     var body: some View {
         if isRoman {
-            RomanView()
+            VStack {
+                RomanView()
+                Spacer(minLength: 0)
+                Button {
+                    isRoman = false
+                } label: {
+                    Text("Roman")
+                        .font(.system(size: 24, weight: .medium, design: .serif))
+                        .padding()
+                }
+                .frame(minWidth: 0, maxWidth: .infinity)
+            
+                .foregroundColor(Color.white)
+                .background(Color.black)
+            }
         } else {
-            NumberView()
+            VStack {
+                NumberView()
+                Spacer(minLength: 0)
+                Button {
+                    isRoman = true
+                } label: {
+                    Text("Number")
+                        .font(.system(size: 24, weight: .medium, design: .serif))
+                        .padding()
+                }
+                .frame(minWidth: 0, maxWidth: .infinity)
+            
+                .foregroundColor(Color.white)
+                .background(Color.black)
+            }
         }
     }
     
