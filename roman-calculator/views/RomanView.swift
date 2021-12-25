@@ -64,7 +64,7 @@ struct RomanView: View {
                                         }
                                     }
 
-                                    self.finalValue = processExpression(exp: self.calExpression)
+                                    self.finalValue = processExpressionRoman(exp: self.calExpression)
                                     
                                     if self.calExpression.count > 3 {
                                         self.calExpression = [self.finalValue, self.calExpression[self.calExpression.count - 1]]
@@ -92,6 +92,36 @@ struct RomanView: View {
     }
 }
 
+func processExpressionRoman(exp:[String]) -> String {
+    
+    if exp.count < 3 {
+        return "0.0"    // Less than 3 means that expression doesnt contain the 2nd no.
+    }
+    
+    var a = translate(value: exp[0]) // Get the first no
+    var c = Double("0.0")   // Init the second no
+    let expSize = exp.count
+    
+    for i in (1...expSize-2) {
+        
+        c = translate(value: exp[i+1])
+        
+        switch exp[i] {
+        case "+":
+            a += c!
+        case "−":
+            a -= c!
+        case "×":
+            a *= c!
+        case "÷":
+            a /= c!
+        default:
+            print("skipping the rest")
+        }
+    }
+    
+    return String(format: "%.1f", a)
+}
 
 struct RomanView_Previews: PreviewProvider {
     static var previews: some View {

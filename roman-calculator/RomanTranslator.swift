@@ -23,17 +23,11 @@ let roman_numbers: [(key: String, value: Int)] = [
     ("M", 1000),
 ]
 
-func translate(value: String) -> Int {
+func translate(value: String) -> Double {
     var res = 0
     var temp = value
     
-    let romanPattern = #"^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"#
-    let valid = value.range(
-        of: romanPattern,
-        options: .regularExpression
-    )
-    
-    guard (valid != nil) else {
+    guard (validateRoman(value: temp)) else {
         return -1
     }
     
@@ -47,5 +41,14 @@ func translate(value: String) -> Int {
         }
     }
     
-    return res
+    return Double(res)
+}
+
+func validateRoman(value: String) -> Bool {
+    let romanPattern = #"^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"#
+    let valid = value.range(
+        of: romanPattern,
+        options: .regularExpression
+    )
+    return valid != nil
 }
