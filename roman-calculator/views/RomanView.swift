@@ -95,11 +95,18 @@ struct RomanView: View {
 func processExpressionRoman(exp:[String]) -> String {
     
     if exp.count < 3 {
-        return "0.0"    // Less than 3 means that expression doesnt contain the 2nd no.
+        return "0.0"
     }
     
-    var a = translate(value: exp[0]) // Get the first no
-    var c = Double("0.0")   // Init the second no
+    var a = Double(exp[0])
+    
+    if Double(exp[0]) != nil {
+        a = Double(exp[0])
+    } else {
+        a = translate(value: exp[0])
+    }
+    
+    var c = Double("0.0")   
     let expSize = exp.count
     
     for i in (1...expSize-2) {
@@ -108,19 +115,19 @@ func processExpressionRoman(exp:[String]) -> String {
         
         switch exp[i] {
         case "+":
-            a += c!
+            a! += c!
         case "−":
-            a -= c!
+            a! -= c!
         case "×":
-            a *= c!
+            a! *= c!
         case "÷":
-            a /= c!
+            a! /= c!
         default:
             print("skipping the rest")
         }
     }
     
-    return String(format: "%.1f", a)
+    return String(format: "%.1f", a!)
 }
 
 struct RomanView_Previews: PreviewProvider {
