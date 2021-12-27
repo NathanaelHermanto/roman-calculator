@@ -94,36 +94,7 @@ struct NumberView: View {
 }
 
 
-func processExpression(exp:[String]) -> String {
-    
-    if exp.count < 3 {
-        return "0.0"
-    }
-    
-    var a = Double(exp[0])
-    var c = Double("0.0")   
-    let expSize = exp.count
-    
-    for i in (1...expSize-2) {
-        
-        c = Double(exp[i+1])
-        
-        switch exp[i] {
-        case "+":
-            a! += c!
-        case "−":
-            a! -= c!
-        case "×":
-            a! *= c!
-        case "÷":
-            a! /= c!
-        default:
-            print("skipping the rest")
-        }
-    }
-    
-    return String(format: "%.1f", a!)
-}
+
 
 
 struct NumberView_Previews: PreviewProvider {

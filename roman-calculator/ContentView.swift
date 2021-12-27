@@ -11,7 +11,6 @@ import SwiftUI
 let primaryColor = Color.init(red: 0, green: 116/255, blue: 178/255, opacity: 1.0)
 
 struct ContentView: View {
-    
     @State var isRoman = true
     
     var body: some View {
@@ -55,7 +54,6 @@ struct ContentView: View {
 
 
 func getBackground(str:String) -> Color {
-    
     if checkIfOperator(str: str) {
         return primaryColor
     }
@@ -63,7 +61,6 @@ func getBackground(str:String) -> Color {
 }
 
 func getFontSize(btnTxt: String) -> CGFloat {
-    
     if checkIfOperator(str: btnTxt) {
         return 42
     }
@@ -71,18 +68,9 @@ func getFontSize(btnTxt: String) -> CGFloat {
     
 }
 
-func checkIfOperator(str:String) -> Bool {
-    
-    if str == "÷" || str == "×" || str == "−" || str == "+" || str == "=" {
-        return true
-    }
-    
-    return false
-    
-}
+
 
 func flattenTheExpression(exps: [String]) -> String {
-    
     var calExp = ""
     for exp in exps {
         calExp.append(exp)

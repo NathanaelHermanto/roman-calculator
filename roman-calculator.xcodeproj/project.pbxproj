@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D80058A1277A024B00B4A9DA /* RomanTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80058A0277A024B00B4A9DA /* RomanTranslator.swift */; };
+		D80058A3277A02CF00B4A9DA /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80058A2277A02CF00B4A9DA /* Calculator.swift */; };
+		D80058A6277A036000B4A9DA /* RomanValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80058A5277A036000B4A9DA /* RomanValidator.swift */; };
+		D80058A8277A03A400B4A9DA /* OperatorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80058A7277A03A400B4A9DA /* OperatorValidator.swift */; };
+		D80058B1277A075400B4A9DA /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80058B0277A075400B4A9DA /* Exceptions.swift */; };
 		D8C417422773A47B0004509D /* roman_calculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C417412773A47B0004509D /* roman_calculatorApp.swift */; };
 		D8C417442773A47B0004509D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C417432773A47B0004509D /* ContentView.swift */; };
 		D8C417462773A47D0004509D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C417452773A47D0004509D /* Assets.xcassets */; };
@@ -16,7 +21,6 @@
 		D8C4175F2773A47D0004509D /* roman_calculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4175E2773A47D0004509D /* roman_calculatorUITestsLaunchTests.swift */; };
 		D8C417712773A5A30004509D /* RomanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C417702773A5A30004509D /* RomanView.swift */; };
 		D8C417732773A5B60004509D /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C417722773A5B60004509D /* NumberView.swift */; };
-		D8C417752773AF9F0004509D /* RomanTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C417742773AF9F0004509D /* RomanTranslator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D80058A0277A024B00B4A9DA /* RomanTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RomanTranslator.swift; sourceTree = "<group>"; };
+		D80058A2277A02CF00B4A9DA /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		D80058A5277A036000B4A9DA /* RomanValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanValidator.swift; sourceTree = "<group>"; };
+		D80058A7277A03A400B4A9DA /* OperatorValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorValidator.swift; sourceTree = "<group>"; };
+		D80058B0277A075400B4A9DA /* Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exceptions.swift; sourceTree = "<group>"; };
 		D8C4173E2773A47B0004509D /* roman-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "roman-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C417412773A47B0004509D /* roman_calculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roman_calculatorApp.swift; sourceTree = "<group>"; };
 		D8C417432773A47B0004509D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,7 +58,6 @@
 		D8C4175E2773A47D0004509D /* roman_calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roman_calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D8C417702773A5A30004509D /* RomanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanView.swift; sourceTree = "<group>"; };
 		D8C417722773A5B60004509D /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
-		D8C417742773AF9F0004509D /* RomanTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanTranslator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D80058A4277A034500B4A9DA /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				D80058A5277A036000B4A9DA /* RomanValidator.swift */,
+				D80058A7277A03A400B4A9DA /* OperatorValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		D861F5D4277A013100DAF913 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D80058A0277A024B00B4A9DA /* RomanTranslator.swift */,
+				D80058A2277A02CF00B4A9DA /* Calculator.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		D8C417352773A47B0004509D = {
 			isa = PBXGroup;
 			children = (
@@ -100,12 +126,14 @@
 		D8C417402773A47B0004509D /* roman-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				D80058A4277A034500B4A9DA /* Validators */,
+				D861F5D4277A013100DAF913 /* Utilities */,
 				D8C4176B2773A5420004509D /* views */,
 				D8C417412773A47B0004509D /* roman_calculatorApp.swift */,
 				D8C417432773A47B0004509D /* ContentView.swift */,
 				D8C417452773A47D0004509D /* Assets.xcassets */,
 				D8C417472773A47D0004509D /* Preview Content */,
-				D8C417742773AF9F0004509D /* RomanTranslator.swift */,
+				D80058B0277A075400B4A9DA /* Exceptions.swift */,
 			);
 			path = "roman-calculator";
 			sourceTree = "<group>";
@@ -274,11 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C417752773AF9F0004509D /* RomanTranslator.swift in Sources */,
+				D80058A6277A036000B4A9DA /* RomanValidator.swift in Sources */,
+				D80058B1277A075400B4A9DA /* Exceptions.swift in Sources */,
+				D80058A1277A024B00B4A9DA /* RomanTranslator.swift in Sources */,
 				D8C417442773A47B0004509D /* ContentView.swift in Sources */,
 				D8C417422773A47B0004509D /* roman_calculatorApp.swift in Sources */,
+				D80058A8277A03A400B4A9DA /* OperatorValidator.swift in Sources */,
 				D8C417712773A5A30004509D /* RomanView.swift in Sources */,
 				D8C417732773A5B60004509D /* NumberView.swift in Sources */,
+				D80058A3277A02CF00B4A9DA /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

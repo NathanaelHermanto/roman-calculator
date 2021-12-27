@@ -92,47 +92,7 @@ struct RomanView: View {
     }
 }
 
-func processExpressionRoman(exp:[String]) -> String {
-    
-    if exp.count < 3 {
-        return "0.0"
-    }
-    
-    var a = Double(exp[0])
-    
-    if Double(exp[0]) != nil {
-        a = Double(exp[0])
-    } else {
-        a = translate(value: exp[0])
-    }
-    
-    var c = Double("0.0")   
-    let expSize = exp.count
-    
-    for i in (1...expSize-2) {
-        
-        c = translate(value: exp[i+1])
-        
-        if (c == -1 || a == -1){
-            return "Invalid roman numerals"
-        }
-        
-        switch exp[i] {
-        case "+":
-            a! += c!
-        case "−":
-            a! -= c!
-        case "×":
-            a! *= c!
-        case "÷":
-            a! /= c!
-        default:
-            print("skipping the rest")
-        }
-    }
-    
-    return String(format: "%.1f", a!)
-}
+
 
 struct RomanView_Previews: PreviewProvider {
     static var previews: some View {
