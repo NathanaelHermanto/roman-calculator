@@ -35,7 +35,7 @@ func processExpressionRoman(exp:[String]) -> String {
         do {
             try c = translate(value: exp[i+1])
         } catch Exceptions.InvalidRomanException(let errorMessage){
-            return errorMessage
+            break
         } catch {
             return "press = to continue"
         }
@@ -63,7 +63,7 @@ func processExpressionRoman(exp:[String]) -> String {
         case "÷":
             a /= c!
         default:
-            print("skipping the rest")
+            break
         }
     }
     
@@ -94,7 +94,7 @@ func processExpression(exp:[String]) -> String {
         case "÷":
             a! /= c!
         default:
-            print("skipping the rest")
+            break
         }
     }
     
