@@ -18,7 +18,7 @@ struct RomanView: View {
 
     
     @State var noBeingEntered: String = ""
-    @State var finalValue:String = "Hallo"
+    @State var finalValue:String = "Hello"
     @State var calExpression: [String] = []
     
     var body: some View {
@@ -93,48 +93,6 @@ struct RomanView: View {
     }
 }
 
-func processExpressionRoman(exp:[String]) -> String {
-    
-    if exp.count < 3 {
-        return "0.0"
-    }
-    
-    var a = 0.0
-    var c = 0.0
-    
-    if let test = Double(exp[0]) {
-        a = test
-    } else {
-        a = translate(value: exp[0])
-    }
-    
-       
-    let expSize = exp.count
-    
-    for i in (1...expSize-2) {
-        
-        c = translate(value: exp[i+1])
-        
-        if (a == -3.141592){
-            return "Invalid roman numerals, Click = to continue"
-        }
-        
-        switch exp[i] {
-            case "+":
-                a += c
-            case "−":
-                a -= c
-            case "×":
-                a *= c
-            case "÷":
-                a /= c
-            default:
-                print("skipping the rest")
-        }
-    }
-    
-    return String(format: "%.1f", a)
-}
 
 struct RomanView_Previews: PreviewProvider {
     static var previews: some View {
