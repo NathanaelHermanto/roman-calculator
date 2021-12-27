@@ -28,7 +28,7 @@ func translate(value: String) throws -> Double {
     var temp = value
     
     guard (validateRoman(value: temp)) else {
-        throw Exceptions.InvalidRomanException("Invalid Roman, press = to continue")
+        throw Exceptions.InvalidRomanException("Invalid Roman, press = to clear")
     }
     
     while temp.count > 0 {

@@ -25,7 +25,7 @@ struct NumberView: View {
         VStack {
             VStack {
                 Text(self.finalValue)
-                    .font(Font.custom("HelveticaNeue-Thin", size: 78))
+                    .font(Font.custom("HelveticaNeue-Thin", size: 50))
                     .frame(idealWidth: 100, maxWidth: .infinity, idealHeight: 100, maxHeight: .infinity, alignment: .center)
                     .foregroundColor(Color.white)
                 Text(flattenTheExpression(exps: calExpression))
