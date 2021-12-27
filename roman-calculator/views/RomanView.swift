@@ -25,9 +25,10 @@ struct RomanView: View {
         VStack {
             VStack {
                 Text(self.finalValue)
-                    .font(Font.custom("HelveticaNeue-Thin", size: 50))
+                    .font(Font.custom("HelveticaNeue-Thin", size: 40))
                     .frame(idealWidth: 100, maxWidth: .infinity, idealHeight: 100, maxHeight: .infinity, alignment: .center)
                     .foregroundColor(Color.white)
+                    .padding()
                 Text(flattenTheExpression(exps: calExpression))
                     .font(Font.custom("HelveticaNeue-Thin", size: 24))
                     .frame(alignment: Alignment.bottomTrailing)
@@ -107,16 +108,16 @@ func processExpressionRoman(exp:[String]) -> String {
         a = translate(value: exp[0])
     }
     
-    if (a == -3.141592){
-        return "Invalid roman numerals"
-    }
-    
        
     let expSize = exp.count
     
     for i in (1...expSize-2) {
         
         c = translate(value: exp[i+1])
+        
+        if (a == -3.141592){
+            return "Invalid roman numerals, Click = to continue"
+        }
         
         switch exp[i] {
             case "+":
