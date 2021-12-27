@@ -25,9 +25,10 @@ struct RomanView: View {
         VStack {
             VStack {
                 Text(self.finalValue)
-                    .font(Font.custom("HelveticaNeue-Thin", size: 50))
+                    .font(Font.custom("HelveticaNeue-Thin", size: 40))
                     .frame(idealWidth: 100, maxWidth: .infinity, idealHeight: 100, maxHeight: .infinity, alignment: .center)
                     .foregroundColor(Color.white)
+                    .padding()
                 Text(flattenTheExpression(exps: calExpression))
                     .font(Font.custom("HelveticaNeue-Thin", size: 24))
                     .frame(alignment: Alignment.bottomTrailing)
@@ -91,7 +92,6 @@ struct RomanView: View {
         .edgesIgnoringSafeArea(.all)
     }
 }
-
 
 
 struct RomanView_Previews: PreviewProvider {
