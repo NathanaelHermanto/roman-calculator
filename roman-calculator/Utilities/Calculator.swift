@@ -31,26 +31,27 @@ func processExpressionRoman(exp:[String]) -> String {
     let expSize = exp.count
     
     for i in (1...expSize-2) {
-       
-//        do {
-//            try  c = translate(value: exp[i+1])
-//        } catch Exceptions.InvalidRomanException(let errorMessage){
-//            return errorMessage
-//        } catch {
-//            return "shiiet bro"
+    
+        do {
+            try c = translate(value: exp[i+1])
+        } catch Exceptions.InvalidRomanException(let errorMessage){
+            return errorMessage
+        } catch {
+            return "shiiet bro"
+        }
+        
+//        if Double(exp[i+1]) != nil {
+//            c = Double(exp[i+1])
+//        } else {
+//            do {
+//                try c = translate(value: exp[i+1])
+//            } catch Exceptions.InvalidRomanException(let errorMessage){
+//                return errorMessage
+//            } catch {
+//                return "shiiet bro"
+//            }
 //        }
         
-        if Double(exp[i+1]) != nil {
-            c = Double(exp[i+1])
-        } else {
-            do {
-                try c = translate(value: exp[i+1])
-            } catch Exceptions.InvalidRomanException(let errorMessage){
-                return errorMessage
-            } catch {
-                return "shiiet bro"
-            }
-        }
         
         switch exp[i] {
         case "+":
