@@ -119,16 +119,16 @@ func processExpressionRoman(exp:[String]) -> String {
         c = translate(value: exp[i+1])
         
         switch exp[i] {
-        case "+":
-            a += c
-        case "−":
-            a -= c
-        case "×":
-            a *= c
-        case "÷":
-            a /= c
-        default:
-            print("skipping the rest")
+            case "+":
+                a += c
+            case "−":
+                a -= c
+            case "×":
+                a *= c
+            case "÷":
+                a /= c
+            default:
+                print("skipping the rest")
         }
     }
     
