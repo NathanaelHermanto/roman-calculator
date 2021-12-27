@@ -98,40 +98,41 @@ func processExpressionRoman(exp:[String]) -> String {
         return "0.0"
     }
     
-    var a = Double(exp[0])
+    var a = 0.0
+    var c = 0.0
     
-    if Double(exp[0]) != nil {
-        a = Double(exp[0])
+    if let test = Double(exp[0]) {
+        a = test
     } else {
         a = translate(value: exp[0])
     }
     
-    var c = Double("0.0")   
+    if (a == -3.141592){
+        return "Invalid roman numerals"
+    }
+    
+       
     let expSize = exp.count
     
     for i in (1...expSize-2) {
         
         c = translate(value: exp[i+1])
         
-        if (c == -1 || a == -1){
-            return "Invalid roman numerals"
-        }
-        
         switch exp[i] {
         case "+":
-            a! += c!
+            a += c
         case "−":
-            a! -= c!
+            a -= c
         case "×":
-            a! *= c!
+            a *= c
         case "÷":
-            a! /= c!
+            a /= c
         default:
             print("skipping the rest")
         }
     }
     
-    return String(format: "%.1f", a!)
+    return String(format: "%.1f", a)
 }
 
 struct RomanView_Previews: PreviewProvider {

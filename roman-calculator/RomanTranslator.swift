@@ -28,7 +28,7 @@ func translate(value: String) -> Double {
     var temp = value
     
     guard (validateRoman(value: temp)) else {
-        return -1
+        return -3.141592
     }
     
     while temp.count > 0 {
