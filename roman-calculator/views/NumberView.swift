@@ -18,7 +18,7 @@ struct NumberView: View {
     
     
     @State var noBeingEntered: String = ""
-    @State var finalValue:String = "Hallo"
+    @State var finalValue:String = "Hello"
     @State var calExpression: [String] = []
     
     var body: some View {

@@ -13,17 +13,17 @@ func processExpressionRoman(exp:[String]) -> String {
         return "0.0"
     }
     
-    var a = Double(exp[0])
+    var a = 0.0
     
-    if Double(exp[0]) != nil {
-        a = Double(exp[0])
+    if let test = Double(exp[0]) {
+        a = test
     } else {
         do {
             try a = translate(value: exp[0])
         } catch Exceptions.InvalidRomanException(let errorMessage){
             return errorMessage
         } catch {
-            return "shiiet bro"
+            return "press = to continue"
         }
     }
     
@@ -37,7 +37,7 @@ func processExpressionRoman(exp:[String]) -> String {
         } catch Exceptions.InvalidRomanException(let errorMessage){
             return errorMessage
         } catch {
-            return "shiiet bro"
+            return "press = to continue"
         }
         
 //        if Double(exp[i+1]) != nil {
@@ -55,19 +55,19 @@ func processExpressionRoman(exp:[String]) -> String {
         
         switch exp[i] {
         case "+":
-            a! += c!
+            a += c!
         case "−":
-            a! -= c!
+            a -= c!
         case "×":
-            a! *= c!
+            a *= c!
         case "÷":
-            a! /= c!
+            a /= c!
         default:
             print("skipping the rest")
         }
     }
     
-    return String(format: "%.1f", a!)
+    return String(format: "%.2f", a)
 }
 
 func processExpression(exp:[String]) -> String {
@@ -98,5 +98,5 @@ func processExpression(exp:[String]) -> String {
         }
     }
     
-    return String(format: "%.1f", a!)
+    return String(format: "%.2f", a!)
 }
